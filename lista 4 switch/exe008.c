@@ -12,7 +12,7 @@ int main(){
         printf("Digite seu nome: ");
         scanf("%s", nome);
         fflush(stdin);
-        printf("Digite sua conta bancaria: ");
+        printf("Digite sua conta bancaria (00-000): ");
         scanf("%s", conta);
         fflush(stdin);
         printf("Ola %s na conta %s voce possui um saldo de R$%.2f\n", nome, conta, saldo);
