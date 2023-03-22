@@ -23,5 +23,5 @@ int main(){
         x = 0;
         x1 = 0;
     }
-    printf("O total de bolas de canhao é %i\n", cont);
+    printf("O total de bolas de canhao e %i\n", cont);
 }
