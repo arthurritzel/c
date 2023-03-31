@@ -6,8 +6,7 @@ int main(){
     scanf("%i", &i);
     printf("Digite o final: ");
     scanf("%i", &x);
-    for (; i <= x; i++){
+    for (i = i; i <= x; i++){
         printf("%i\n", i);
     }
-    
 }
