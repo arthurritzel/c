@@ -1,19 +1,17 @@
 #include <stdio.h>
 
-float calc(float n1){
-    if(n1 > 0){
-        printf("O numero é positivo");
-    }else if(n1 == 0){
-        printf("O numero é igual a zero");
+int calc(int n1){
+    if(n1 % 2 == 0){
+        printf("O numero é par");
     }else{
-        printf("O numero é negativo");
+        printf("O numero é impar");
     }
     return 0;
 }
 
 int main(){
-    float n;
+    int n;
     printf("Digite um valor: ");
-    scanf("%f", &n);
+    scanf("%i", &n);
     calc(n);
 }
