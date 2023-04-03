@@ -5,7 +5,7 @@ float f1(float compra){
     float valor;
     int parc, x, x1;
     do{
-        printf("Escolha a forma de pagamento\n[A] A vista com 10 porcento de desconto\n[B] Em 2x sem juros\n[C] De 3 a 10 vezes com jutos de 3 porcento ao mes\n->");
+        printf("Escolha a forma de pagamento\n[A] A vista com 10%% de desconto\n[B] Em 2x sem juros\n[C] De 3 a 10 vezes com juros de 3%% ao mes\n->");
         scanf("%s", &esc);
         switch (esc){
         case 'A':
@@ -48,7 +48,7 @@ float f2(float compra){
     float valor;
     int x;
     do{
-        printf("Escolha a forma de pagamento\n[A] A vista com 10 porcento de desconto\n[B] Em 2x sem juros\n->");
+        printf("Escolha a forma de pagamento\n[A] A vista com 10%% de desconto\n[B] Em 2x sem juros\n->");
         scanf("%s", &esc);
         switch (esc){
         case 'A':
