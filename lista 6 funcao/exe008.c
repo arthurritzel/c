@@ -26,7 +26,7 @@ int main(){
     scanf("%f", &n2);
     printf("Digite a terceira nota: ");
     scanf("%f", &n3);
-    printf("Digite a letra (a para aritmetica p para ponderada): ");
+    printf("Digite a letra (A para aritmetica P para ponderada): ");
     scanf("%s", &s);
     m = calc(n1, n2, n3, s);
     printf("O valor da media é %f", m);
