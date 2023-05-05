@@ -21,8 +21,7 @@ int main(){
             }
         }
          
-        for (int j = 0; j < 10; j++)
-        {
+        for (int j = 0; j < 10; j++){
             if(n1[i1] == n2[j] && very != 1){
                 n3[i1] = n1[i1];
                 cont++;
