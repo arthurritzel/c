@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int n1[10], n2[10], n3[10], very = 0, cont = 0;
+    int n1[10], n2[10], n3[10], very = 0, cont = 0, in3 = 0;
     for (int i = 0; i < 10; i++){
         printf("->");
         scanf("%i", &n1[i]);
@@ -23,8 +23,9 @@ int main(){
          
         for (int j = 0; j < 10; j++){
             if(n1[i1] == n2[j] && very != 1){
-                n3[i1] = n1[i1];
+                n3[in3] = n1[i1];
                 cont++;
+                in3++;
                 break;
             }else{
                 n3[i1] = 0;
