@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main(){
-    int x, mult;
+    int x, mult = 1;
     printf("Digite o numero a ser apresentado seu fatorial: ");
     scanf("%i", &x);
-    for (; x > 0; x--){
-        mult = x * mult;
+    for (int i = x; i > 0; i--){
+        mult = i * mult;
     }
     printf("%i\n", mult);
     
