@@ -13,7 +13,9 @@ int main(){
     displayfor[15]={'|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|'}, 
     displayprint[28]={'|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|'}, chute[11], letra;
     int modojogo, very = 0, cont = 0, certas = 0, conf = 0, cont2 = 0;
-    printf("Escolha o modo de jogo\n[1]Voce tentara acertar a palavra inteira\n[2]Voce deve acertar uma letra de cada vez\n->");
+
+    
+    printf("Escolha o modo de jogo\n[1]Voce tentara acertar a palavra inteira\n[2]Voce deve acertar uma letra de cada vez\n[3]Voce pode digitar letra por letra ou a palavra inteira\n->");
     scanf("%i", &modojogo);
     fflush(stdin);
    
@@ -188,10 +190,145 @@ int main(){
             printf("------------------------------------\n\n");
         }
         break;
+
+    case 3://inicia o modo de jogo 3
+        printf("\n\nVOCE TEM CINCO TENTATIVAS POR PALAVRA!\n\n");
+        for (int i = 0; i < 5; i++){
+            very = 0;
+            cont = 0;
+            if (i == 0){
+                printf("1 - Estrutura de repeticao em C\n| * | * | * | * | * |\n");
+            }else if (i == 1){
+                printf("2 - Estrutura condicional em C que aceita como parametro apenas um numero inteiro ou um caractere\n| * | * | * | * | * | * |\n");
+            }else if (i == 2){
+                printf("3 - Tipo de variavel que permite alocar mais de um valor dentro dela\n| * | * | * | * | * |\n");
+            }else if (i == 3){
+                printf("4 - Estrutua de repeticao conhecida como contadora\n| * | * | * |\n");
+            }else if (i == 4){
+                printf("5 - Nome do comando em C que permite escrever coisas na tela\n| * | * | * | * | * | * |\n");
+            }
+            cont = 0;
+            do{//inicia o loop de digitacao
+                printf("resposta: ");
+                gets(chute);
+                fflush(stdin);
+                conf = 0;
+                for (int j = 0; mat1[i][j] != '\0'; j++){
+                    for (int k = 0; chute[k] != '\0' ; k++){
+                        if (chute[k] == mat1[i][j]){
+                            if (i == 0){
+                                if(j == 0){
+                                    displaywhile[2] = chute[k];
+                                }else if(j == 1){
+                                    displaywhile[6] = chute[k];
+                                }else if (j == 2){
+                                    displaywhile[10] = chute[k];
+                                }else if (j == 3){
+                                    displaywhile[14] = chute[k];
+                                }else if (j == 4){
+                                    displaywhile[18] = chute[k];
+                                }
+                                printf("%s\n", displaywhile);
+
+                                if(!strcmp(mat[0], displaywhile)){
+                                    printf("\nVoce acertou!\n");
+                                    very = 1;
+                                    certas++;
+                                }
+                            }else if(i == 1){
+                                if(j == 0){
+                                    displayswitch[2] = chute[k];
+                                }else if(j == 1){
+                                    displayswitch[6] = chute[k];
+                                }else if (j == 2){
+                                    displayswitch[10] = chute[k];
+                                }else if (j == 3){
+                                    displayswitch[14] = chute[k];
+                                }else if (j == 4){
+                                    displayswitch[18] = chute[k];
+                                }else if (j == 5){
+                                    displayswitch[22] = chute[k];
+                                }
+
+                                printf("%s\n", displayswitch);
+                                if(!strcmp(mat[1], displayswitch)){
+                                    printf("\nVoce acertou!\n");
+                                    very = 1;
+                                    certas++;
+                                }
+                            }else if (i == 2){
+                                if(j == 0){
+                                    displayvet[2] = chute[k];
+                                }else if(j == 1){
+                                    displayvet[6] = chute[k];
+                                }else if (j == 2){
+                                    displayvet[10] = chute[k];
+                                }else if (j == 3){
+                                    displayvet[14] = chute[k];
+                                }else if (j == 4){
+                                    displayvet[18] = chute[k];
+                                }
+                                printf("%s\n", displayvet);
+
+                                if(!strcmp(mat[2], displayvet)){
+                                    printf("\nVoce acertou!\n");
+                                    very = 1;
+                                    certas++;
+                                }
+                            }else if(i == 3){
+                                if(j == 0){
+                                    displayfor[2] = chute[k];
+                                }else if(j == 1){
+                                    displayfor[6] = chute[k];
+                                }else if (j == 2){
+                                    displayfor[10] = chute[k];
+                                }
+                                printf("%s\n", displayfor);
+
+                                if(!strcmp(mat[3], displayfor)){
+                                    printf("\nVoce acertou!\n");
+                                    very = 1;
+                                    certas++;
+                                }
+                            }else if(i == 4){
+                                if(j == 0){
+                                    displayprint[2] = chute[k];
+                                }else if(j == 1){
+                                    displayprint[6] = chute[k];
+                                }else if (j == 2){
+                                    displayprint[10] = chute[k];
+                                }else if (j == 3){
+                                    displayprint[14] = chute[k];
+                                }else if (j == 4){
+                                    displayprint[18] = chute[k];
+                                }else if(j == 5){
+                                    displayprint[22] = chute[k];
+                                }
+                                printf("%s\n", displayprint);
+
+                                if(!strcmp(mat[4], displayprint)){
+                                    printf("\nVoce acertou!\n");
+                                    very = 1;
+                                    certas++;
+                                }
+                            }
+                        }
+                    }
+                }
+                cont++;
+                if (cont == 5){
+                    very = 1;
+                    printf("\nSuas tentativas para essa palavra acabaram!\n");
+                }
+                
+            }while(very != 1);
+            printf("-------------------------------------\n");
+        }
+        break;
     default:
         break;
     }
-    printf("Voce acertou %i de 5 palavras\nAqui esta o gabarito\n\n", certas);
+    printf("Voce acertou %i de 5 palavras\n\nAqui esta o gabarito\n", certas);
     printf("1 - Estrutura de repeticao em C\n| w | h | i | l | e |\n");
     printf("2 - Estrutura condional em C que aceita como parametro apenas um numero inteiro ou um caractere\n| s | w | i | t | c | h |\n");
     printf("3 - Tipo de variavel que permite alocar mais de um valor dentro dela\n| v | e | t | o | r |\n");
