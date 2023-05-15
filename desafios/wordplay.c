@@ -4,8 +4,15 @@
 #include <ctype.h>
 
 int main(){
-    char mat[5][11] = {"while", "switch", "vetor", "for", "printf"}, displaywhile[6]={'*', '*', '*', '*' , '*'}, displayswitch[7]={'*', '*', '*', '*' , '*', '*'}, displayvet[6]={'*', '*', '*', '*' , '*'}, displayfor[4]={'*', '*', '*'}, displayprint[7]={'*', '*', '*', '*' , '*', '*'}, chute[11], letra;
-    int modojogo, very = 0, cont = 0, certas = 0, conf = 0;
+    char 
+    mat1[5][11] = {"while", "switch", "vetor", "for", "printf"},
+    mat[5][30] = {"| w | h | i | l | e |", "| s | w | i | t | c | h |", "| v | e | t | o | r |", "| f | o | r |", "| p | r | i | n | t | f |"}, 
+    displaywhile[23]={'|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|'}, 
+    displayswitch[28]={'|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|'}, 
+    displayvet[23]={'|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|'}, 
+    displayfor[15]={'|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|'}, 
+    displayprint[28]={'|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|', ' ', '*', ' ', '|'}, chute[11], letra;
+    int modojogo, very = 0, cont = 0, certas = 0, conf = 0, cont2 = 0;
     printf("Escolha o modo de jogo\n[1]Voce tentara acertar a palavra inteira\n[2]Voce deve acertar uma letra de cada vez\n->");
     scanf("%i", &modojogo);
     fflush(stdin);
@@ -33,7 +40,7 @@ int main(){
                 gets(chute);
                 fflush(stdin); 
 
-                if (!strcmp(mat[i], chute)){//verifica se a palavra digitada e a correta
+                if (!strcmp(mat1[i], chute)){//verifica se a palavra digitada e a correta
                     printf("\nVoce acertou\n");
                     if (i == 0){
                         printf("1 - Estrutura de repeticao em C\n| w | h | i | l | e |\n\n");
@@ -87,7 +94,7 @@ int main(){
                 conf = 0;
 
                 if (i == 0){//confere em qual palavra esta                    
-                    for (int j = 0; j < 5 ; j++){
+                    for (int j = 0; j < 25 ; j++){
                         if (letra == mat[i][j]){//verifica se a letra digitada contem na palavra correta
                             displaywhile[j] = letra; 
                             conf = 1; 
@@ -103,7 +110,7 @@ int main(){
                     }
 
                 }else if (i == 1){
-                    for (int j = 0; j < 6 ; j++){
+                    for (int j = 0; j < 28 ; j++){
                         if (letra == mat[i][j]){
                             displayswitch[j] = letra;    
                             conf = 1;  
@@ -119,7 +126,7 @@ int main(){
                     }
 
                 }else if (i == 2){
-                    for (int j = 0; j < 5 ; j++){
+                    for (int j = 0; j < 23 ; j++){
                         if (letra == mat[i][j]){
                             displayvet[j] = letra; 
                             conf = 1;     
@@ -135,7 +142,7 @@ int main(){
                     }
 
                 }else if (i == 3){
-                    for (int j = 0; j < 3 ; j++){
+                    for (int j = 0; j < 15 ; j++){
                         if (letra == mat[i][j]){
                             displayfor[j] = letra;  
                             conf = 1;    
@@ -151,7 +158,7 @@ int main(){
                     }
 
                 }else if (i == 4){
-                    for (int j = 0; j < 6 ; j++){
+                    for (int j = 0; j < 28 ; j++){
                         if (letra == mat[i][j]){
                             displayprint[j] = letra;  
                             conf = 1;    
