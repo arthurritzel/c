@@ -185,6 +185,7 @@ int main(){
                     break;
                 }
             }while (very != 1);
+            printf("-----------------------------------------------------------\n");
     }while(very2 != 5);
     printf("\nVoce acertou %i de 5 perguntas\n", certas);
     for (int i = 0; i < 5; i++){
@@ -219,4 +220,6 @@ int main(){
     for (int i = 0; i < 5; i++){
         printf("%i- %s\n", i + 1, mat[i]);
     }
+
+    system("pause");
 }

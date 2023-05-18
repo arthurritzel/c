@@ -334,4 +334,6 @@ int main(){
     printf("3 - Tipo de variavel que permite alocar mais de um valor dentro dela\n| v | e | t | o | r |\n");
     printf("4 - Estrutua de repeticao conhecida como contadora\n| f | o | r |\n");
     printf("5 - Nome do comando em C que permite escrever coisas na tela\n| p | r | i | n | t | f |\n");
+
+    system("pause");
 }
