@@ -30,13 +30,13 @@ int main(){
                     break;
                 case 2:
                     do{
-                    printf("Digite o valor a ser sacado: ");
-                    scanf("%f", &mov);
-                    x5 = 0;
-                    if(mov > saldo){
-                        printf("\n\nSua opcao de saque e maior que seu saldo! \n\n");
-                        x5 = 1;
-                    }
+                        printf("Digite o valor a ser sacado: ");
+                        scanf("%f", &mov);
+                        x5 = 0;
+                        if(mov > saldo){
+                            printf("\n\nSua opcao de saque e maior que seu saldo! \n\n");
+                            x5 = 1;
+                        }
                     }while(x5 != 0);
                     saldo = saldo - mov;
                     x4 = 0;
