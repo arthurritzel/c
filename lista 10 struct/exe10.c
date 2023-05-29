@@ -103,4 +103,5 @@ int main(){
         printf("Numero: %i\n", reser[i].numero);
         printf("-------------------\n");
     }
+    
 }
